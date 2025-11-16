@@ -1,0 +1,118 @@
+.homepage-hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    padding: 2rem;
+    box-sizing: border-box;
+    text-align: center;
+    /* 
+      THIS IS THE ONLY CHANGE:
+      We make the background transparent so the new global
+      background image in index.css is visible.
+    */
+    background: transparent;
+  }
+    
+  .hero-content {
+    max-width: 700px;
+  }
+    
+  .hero-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 1.5rem;
+  }
+    
+  .hero-headline {
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: #3D2B1F;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+  }
+    
+  .hero-subheadline {
+    font-size: 1.2rem;
+    color: #5a4b40;
+    margin-bottom: 3rem; 
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+    
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+    
+  .hero-button {
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid #556B2F;
+    cursor: pointer;
+  }
+    
+  .hero-button.primary {
+    background-color: #556B2F;
+    color: white;
+  }
+  .hero-button.primary:hover {
+    background-color: #6B8E23;
+    border-color: #6B8E23;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(85, 107, 47, 0.3);
+  }
+    
+  .hero-button.secondary {
+    background-color: transparent;
+    color: #556B2F;
+  }
+  .hero-button.secondary:hover {
+    background-color: #556B2F;
+    color: white;
+  }
+    
+  /* =============================================== */
+  /* ===         ANIMATIONS FOR 'WOW' FACTOR       === */
+  /* =============================================== */
+    
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+    
+  .hero-logo {
+    animation: fadeInUp 0.5s ease-out forwards;
+  }
+    
+  .hero-headline {
+    opacity: 0; 
+    animation: fadeInUp 0.5s ease-out 0.2s forwards;
+  }
+    
+  .hero-subheadline {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out 0.4s forwards;
+  }
+    
+  .hero-actions {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out 0.6s forwards;
+  }
